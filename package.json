@@ -1,0 +1,24 @@
+{
+  "name": "ecma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "asciidoctor index.adoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phothinmg/ecma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/phothinmg/ecma/issues"
+  },
+  "homepage": "https://github.com/phothinmg/ecma#readme",
+  "dependencies": {
+    "asciidoctor": "^3.0.4"
+  }
+}
