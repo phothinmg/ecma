@@ -4,12 +4,35 @@ Pho Thin Mg <phothinmg@disroot.org>
 :highlightjs-theme: monokai
 :highlightjs-languages: js,ts
 :toc: left
+:toclevels: 4
 :favicon:
 :tip-caption: 💡
 :note-caption: 👉
+:sectnums:
+:linkcss:
+:stylesdir: styles/
+:stylesheet: index.css
+:nofooter:
+:imagesdir: images/
+:table-caption: Table
+:es6-new-features: footnote:[https://web.archive.org/web/20180318064130/http://es6-features.org/#Constants[es6-features.org]]
+:standard-es6: footnote:[https://262.ecma-international.org/6.0/index.html[ECMAScript^®^ 2015]]
 
 
-== Brief Introduction
+== About Notes
+
+****
+ယခုမှတ်စုအားကျနော်လေ့လာမှတ်သားမိသမျှ အားချရေးထားခြင်းဖြစ်ပါသည်။ အမှားအယွင်းတစ်စုံရှိပါက ကျနော်၏လေ့လာမှုအားနည်းခြင်းသာဖြစ်ပါသည်။ အမှားများအား တည့်မတ်ပြုပြင်ခြင်း နှင့် အတူတကွပူးပေါင်းလေ့လာ ခြင်းတို့အား ကြိုဆိုပါသည်။ 
+
+
+NOTE: Discussions :  https://github.com/phothinmg/ecma/discussions
+
+NOTE: Repo : https://github.com/phothinmg/ecma
+
+****
+
+
+== Brief Introduction about ECMAScript^®^
 
 === Ecma International
 
@@ -21,10 +44,145 @@ Ecma Standards 400 ကျော် Technical Reports 100 ကျော် ကိ�
 
 ===  ECMAScript^®^
 
-ECMAScript (အတိုကောက် ES) သည် https://en.wikipedia.org/wiki/Netscape[Netscape]  မှ https://en.wikipedia.org/wiki/Brendan_Eich[Brendan Eich] ဖန်တီးထားသော scripting language တစ်ခု၏ စံသတ်မှတ်ချက်တစ်ခုဖြစ်သည်။ 1995 ခုနှစ် ဒီဇင်ဘာလတွင် https://en.wikipedia.org/wiki/Sun_Microsystems[Sun Microsystems] နှင့် https://en.wikipedia.org/wiki/Netscape[Netscape] တို့သည် https://en.wikipedia.org/wiki/JavaScript[JavaScript] ကိုကြေငြာခဲ့သည်။ 1996 ခုနှစ် နိုဝင်ဘာလတွင် https://en.wikipedia.org/wiki/Netscape[Netscape] သည် https://en.wikipedia.org/wiki/JavaScript[JavaScript] ၏ စံသတ်မှတ်ချက်ကို မြှင့်တင်ရန်အတွက် https://ecma-international.org/[Ecma International] နှင့် တွေ့ဆုံဆွေးနွေးမှုအားကြေငြာခဲ့ပြီး https://ecma-international.org/publications-and-standards/standards/ecma-262/[ECMA-262] ထုတ်ဝေခြင်းအား 1997 ဇွန်လ တွင် Ecma အထွေထွေညီလာခံ မှကြေငြာခဲ့သည်။  https://ecma-international.org/publications-and-standards/standards/ecma-262/[ECMA-262] သည် https://shorturl.at/wmJuT[Ecma စံနှုန်းသတ်မှတ်ချက်များ] ထဲမှ https://en.wikipedia.org/wiki/JavaScript[JavaScript] ၏ စံနှုန်းသတ်မှတ်ချက်ဖြစ်သည်။
+ECMAScript^®^ (အတိုကောက် ES) သည် https://en.wikipedia.org/wiki/Netscape[Netscape]  မှ https://en.wikipedia.org/wiki/Brendan_Eich[Brendan Eich] ဖန်တီးထားသော scripting language တစ်ခု၏ စံသတ်မှတ်ချက်တစ်ခုဖြစ်သည်။ 1995 ခုနှစ် ဒီဇင်ဘာလတွင် https://en.wikipedia.org/wiki/Sun_Microsystems[Sun Microsystems] နှင့် https://en.wikipedia.org/wiki/Netscape[Netscape] တို့သည် https://en.wikipedia.org/wiki/JavaScript[JavaScript] ကိုကြေငြာခဲ့သည်။ 1996 ခုနှစ် နိုဝင်ဘာလတွင် https://en.wikipedia.org/wiki/Netscape[Netscape] သည် https://en.wikipedia.org/wiki/JavaScript[JavaScript] ၏ စံသတ်မှတ်ချက်ကို မြှင့်တင်ရန်အတွက် https://ecma-international.org/[Ecma International] နှင့် တွေ့ဆုံဆွေးနွေးမှုအားကြေငြာခဲ့ပြီး https://ecma-international.org/publications-and-standards/standards/ecma-262/[ECMA-262] ထုတ်ဝေခြင်းအား 1997 ဇွန်လ တွင် Ecma အထွေထွေညီလာခံ မှကြေငြာခဲ့သည်။  https://ecma-international.org/publications-and-standards/standards/ecma-262/[ECMA-262] သည် https://shorturl.at/wmJuT[Ecma စံနှုန်းသတ်မှတ်ချက်များ] ထဲမှ https://en.wikipedia.org/wiki/JavaScript[JavaScript] ၏ စံနှုန်းသတ်မှတ်ချက်ဖြစ်သည်။
+
+==== Technical Committee 39
+
+https://ecma-international.org/technical-committees/tc39/[Technical Committee 39](အတိုကောက် TC39) သည်
+ECMAScript^®^ စံနှုန်းကို ပြောင်းလဲခြင်းနှင့် ထိန်းသိမ်းခြင်းအတွက် တာဝန်ရှိသော https://ecma-international.org/[Ecma International]  ကော်မတီဖြစ်သည်။ 
 
 [NOTE]
 __ECMAScript__^®^ __is__ __registered__ __trademarks__ __of__ https://ecma-international.org/[__Ecma International__].
 
 [NOTE]
 __JavaScript__^TM^ __is__ __a__ __trademark__ __of__ https://www.oracle.com/[__Oracle__].
+
+==== ထုတ်ပြန်ခဲ့ပီးသော edition များ
+
+.ECMA-262 Versions
+[%autowidth]
+|===
+^.>| Edition ^.>| Date published ^.>| Name 
+
+^.>| 1 | June 1997 | 
+^.>| 2 | August 1998 |
+^.>| 3 | December 1999 |
+^.>| 4 | Abandoned (last draft 30 June 2003) | ECMAScript 4 (ES4)
+^.>| 5 | December 2009 | ES5
+^.>| 5.1 | June 2011 | ES5.1 
+^.>| 6 | June 2015 | ECMAScript 2015 (ES2015)
+^.>| 7 | June 2016 | ECMAScript 2016 (ES2016) 
+^.>| 8 | June 2017 | ECMAScript 2017 (ES2017) 
+^.>| 9 | June 2018 | ECMAScript 2018 (ES2018)
+^.>| 10 | June 2019 | ECMAScript 2019 (ES2019) 
+^.>| 11 | June 2020 | ECMAScript 2020 (ES2020) 
+^.>| 12 | June 2021 | ECMAScript 2021 (ES2021) 
+^.>| 13 | June 2022 | ECMAScript 2022 (ES2022) 
+^.>| 14 | June 2023 | ECMAScript 2023 (ES2023)  
+^.>| 15 | June 2024 | ECMAScript 2024 (ES2024) 
+|===
+
+ထုတ်ပြန်ခဲ့ပီးသော edition များ အားကြည့်ခြင်းအားဖြင့် နံပါတ်စဥ်အားဖြင့် 15 ခု အကြိမ် 16 ကြိမ်ရှိခဲ့သော်လည်း 4th edition နံပါတ်အဖြစ်ဖော်ပြထားသော်လည်း ထုတိပြန်ခြင်းမရှိခဲ့ပါ အသိများသော 5th edition (es5) တွင် 5.1 edition ဟူ၍ ISO/IEC 16262:2011 နှင့်ကိုက်ညီစေရန် ပြင်ဆင်ထုတ်ပြန်မှုရှိခဲ့ပါသည်။ 
+
+1999 တွင်ထုတ်ပြန်ခဲ့သော 3th edition (ES3) နောက်ပိုင်း အကြီးစားအဆင်မြှင့်တင်မှု များထည့်သွင်းနိုင်ရန် နှင့် ES3 ၏ အားနည်းချက်များကိုပြင်ဆင်ရန် ကြိုးပန်းခဲ့ကြသည်။
+ES3 ၏လုပ်ဆောင်ချက်အချို့ကိုလည်းစွန့်လွှတ်ရန်ပါထည့်သွင်းစဥ်းစားခဲ့သည်ဟုယူဆရပါသည်။
+အခြား scripting language များနှင့် browser များအတွက် ES4 အဆိုပြုချက်တွေက အခက်အခဲများဖြစ်ပေါ်စေနိုင်ကြောင်း ၄င်းတို့အခြင်းခြင်းကြားအပြန်အလှန်မှီခိုမှုများကလည်း ES3 ထက်ပိုမိုကြီးမားရှုပ်ထွေးမှုများရှိကြောင်းဝေဖန်ထောက်ပြမှု့များ ရှိခဲ့ ​​ပြီး
+Yahoo Microsoft Google အစရှိသော သဘောထားကွဲလွဲသူများက အစမ်းသဘော ES3.1 အနေနှင့်  အဆင့်မြင့်တင်မှုအနည်းငယ်ဖြင့် ဒီဇိုင်းထုတ်ရန် ကိုယ်ပိုင်ဆပ်ကော်မတီတစ်ခုဖွဲ့စည်းခဲ့သည်။
+edition နှစ်ခုလုံးတစ်ပြိုင်ထဲ ထုတ်ပြန်နိုင်ရန် နှင့် အချို့သော ES4 အဆင့်မြင့်တင်မှုများအား ၄င်းတို့၏ ပလက်ဖောင်းများတွင်အသုံးပြုရန် မဖြစ်နိုင်သေးသည့်အနေအထားအနေနှင့် သဘောတူညီခဲ့ကြသည်။ သို့သော်လည်း သဘောထားကွဲလွဲမှုများ ဆက်တိုက်ဖြစ်ပေါ်နေဆဲဖြစ်ပြီး အဆိုပါ ပလက်ဖောင်းတွေက ES4 ကို support လုပ်ပါ့မလား implement လုပ်ပါ့မလားဆိုသည့်သံသယ ဖြစ်ပေါ်လာသည့် အခြေအနေအထိရောက်ရှိခဲ့သည်။ 
+
+ECMAScript^®^ ၏ အနာဂတ်အတွက် 2008 ခုနှစ် ဇွန်လတွင် သဘောထားကွဲလွဲသော အဖွဲ့နှစ်ဖွဲ့ကြား သဘောတူညီမှုရရှိခဲ့သည်။ TC39 သည် ES3.1 (နောင်တွင် ES5) တွင်ပါဝင်လုပ်ဆောင်သူများနှင့်အပြည့်အဝပူးပါင်းပြီး 2009 ဧပြီလတွင် ES5 မူကြမ်းကိုအပြီးသတ်ထုတ်ပြန်ခဲ့သည်။ 2009 ဒီဇင်ဘာ ၃ ရက်တွင် ES4 နှင့် ES3.1 အားရာဇဝင်တွင်ထားခဲ့ပြီး ES5 အားထုတ်ပြန်နိုင်ခဲ့သည်။ 
+
+
+== The main new features of ECMAScript^®^ editions
+
+ES3 မှ ES4 ES3.1 အငြင်းပွားမှုအပြီး ထုတ်ပြန်လာသော ES5 မှစပြီး ထပ်မံဖြည့်သွင်းလာသော edition အလိုက် feature အသစ်များ စုစည်းဖော်ပြပါသည်။
+
+=== ECMAScript^®^ 2009,ES5
+
+==== Strict Mode
+
+Undeclared variable များအသုံးပြုခြင်းကိုတားဆီးပြီး error handling ပိုကောင်းသည်။
+
+[source,js]
+----
+'use strict' ; 
+x = 3.14 ; // x ကို declared မလုပ်သောကြောင့် error ဖြစ်ပါမည်
+----
+
+
+==== `String.trim()`
+
+`" example"` to `"example"`
+
+[source,js]
+----
+const str = " example";
+console.log(str.trim()); //"example"
+----
+
+==== `String.charAt()`
+
+Return a single character from a given position in a string.
+
+[source,js]
+----
+const str = "example";
+console.log(str.charAt(0)); //"e"
+console.log(str.charAt(1)); //"x"
+console.log(str.charAt(2)); //"a"
+// whitespace before text = ""
+const str = " example";
+console.log(str.charAt(0)); //""
+console.log(str.charAt(1)); //"e"
+console.log(str.charAt(2)); //"x"
+----
+
+==== `JSON.parse() and JSON.stringify()`
+
+[source,js]
+----
+const json_str = `{ "a": "123", "b": "abc" }`;
+const js_obj = JSON.parse(json_str);
+const str_json = JSON.stringify(js_obj);
+console.log(js_obj); //{ a: '123', b: 'abc' }
+console.log(js_obj.b); //abc
+console.log(str_json); //{"a":"123","b":"abc"}
+----
+
+==== Object Methods
+
+New methods for manipulating objects.
+
+[source,js]
+----
+const obj = {a:1}; 
+Object.defineProperty(obj, 'b', {value:2}); 
+console.log( Object.keys(obj)); // ["a", "b"]
+----
+
+==== Array Methods
+
+Methods to iterate and manipulate arrays.
+
+[source,js]
+----
+const arr = [1, 2, 3, 4]; 
+const doubled = arr.map( x => x * 2 ); 
+console.log(doubled); // [2, 4, 6, 8]
+----
+
+=== ECMAScript 2015^®^ , ES6(ES2015)
+
+အဆင့်မြင့်တင်မှုများစွာဖြင့် ထွက်ပေါ်လာခဲ့သော ES6 သည် https://en.wikipedia.org/wiki/JavaScript[JavaScript] ယနေ့ပုံစံ ဖြစ်လာရန် အရေးပါသော အပြောင်းအလဲတစ်ခုဖြစ်ခဲ့သည်။ ES5 နှင့် ES3 အကြား အငြင်းပွားမှုတွေက ES6 ကို ပိုမိုအားကောင်းစေခဲ့သလို သက်ဆိုင်သူ ပလက်ဖောင်းများ နည်းပညာအဖွဲ့အစည်းကြီးများ Libary များ framework များ အကြား ပိုမိုချောမွေ့သော ပူးပေါင်းဆောင်ရွက်မှုအားဖြစ်ပေါ်စေခဲ့ကြောင်းသုံးသပ်ပါသည်။2015 တွင် ထုတ်ပြန်ခဲ့သော ES6 နောက်ပိုင်း နှစ်စဥ် အားထုတ်ပြန်ခဲ့ပြီး ES6 ES7 ဆိုသည့်အခေါ်အဝေါ်အစား ES2015 ES2000 စသည်ဖြင့်သုံးနှုန်းလာခဲ့ကြောင်း တွေ့ရှိရပါသည်။ 
+
+ES6 တွင်ပါရှိလာသော #feature အသစ်များအားလုံး#{es6-new-features}{standard-es6} လောလောဆယ်ဆယ် ယခုမှတ်စုတွင် ဖော်ပြနိုင်စွမ်း မရှိသေးပါ။ အသုံးများသောတစ်ချို့ကိုသာဖော်ပြထားပါသည်။
+
+
+
+== References
+
+ . https://dev.to/techelopment/ecmascript-a-collection-of-the-main-new-features-of-each-version-8n5[ECMAScript - A collection of the main new features of each version] by https://dev.to/techelopment[Techelopment]
+
+ . https://medium.com/@yourfuse/javascript-whats-new-with-ecmascript-2024-es15-ef056d2f4bf1[What’s new with ECMAScript^®^ 2024 (ES15) — In Depth Guide] by https://medium.com/@yourfuse[Igor Komolov] 
+
+ . https://w.wiki/DxAv[ECMAScript version history]

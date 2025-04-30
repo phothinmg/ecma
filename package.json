@@ -13,12 +13,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/phothinmg/ecma/issues"
   },
   "homepage": "https://github.com/phothinmg/ecma#readme",
   "dependencies": {
+    "@types/minify": "^9.1.4",
     "asciidoctor": "^3.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
   }
 }
