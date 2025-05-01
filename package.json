@@ -2,17 +2,16 @@
   "name": "ecma",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "asciidoctor index.adoc"
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phothinmg/ecma.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Pho Thin Mg<phothinmg@disroot.org>",
+  "license": "MIT",
   "type": "module",
   "bugs": {
     "url": "https://github.com/phothinmg/ecma/issues"

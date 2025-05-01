@@ -15,8 +15,6 @@ Pho Thin Mg <phothinmg@disroot.org>
 :nofooter:
 :imagesdir: images/
 :table-caption: Table
-:es6-new-features: footnote:[https://web.archive.org/web/20180318064130/http://es6-features.org/#Constants[es6-features.org]]
-:standard-es6: footnote:[https://262.ecma-international.org/6.0/index.html[ECMAScript^®^ 2015]]
 
 
 == About Notes
@@ -30,7 +28,6 @@ NOTE: Discussions :  https://github.com/phothinmg/ecma/discussions
 NOTE: Repo : https://github.com/phothinmg/ecma
 
 ****
-
 
 == Brief Introduction about ECMAScript^®^
 
@@ -93,89 +90,378 @@ edition နှစ်ခုလုံးတစ်ပြိုင်ထဲ ထု�
 ECMAScript^®^ ၏ အနာဂတ်အတွက် 2008 ခုနှစ် ဇွန်လတွင် သဘောထားကွဲလွဲသော အဖွဲ့နှစ်ဖွဲ့ကြား သဘောတူညီမှုရရှိခဲ့သည်။ TC39 သည် ES3.1 (နောင်တွင် ES5) တွင်ပါဝင်လုပ်ဆောင်သူများနှင့်အပြည့်အဝပူးပါင်းပြီး 2009 ဧပြီလတွင် ES5 မူကြမ်းကိုအပြီးသတ်ထုတ်ပြန်ခဲ့သည်။ 2009 ဒီဇင်ဘာ ၃ ရက်တွင် ES4 နှင့် ES3.1 အားရာဇဝင်တွင်ထားခဲ့ပြီး ES5 အားထုတ်ပြန်နိုင်ခဲ့သည်။ 
 
 
-== The main new features of ECMAScript^®^ editions
+== The main new features of editions
 
 ES3 မှ ES4 ES3.1 အငြင်းပွားမှုအပြီး ထုတ်ပြန်လာသော ES5 မှစပြီး ထပ်မံဖြည့်သွင်းလာသော edition အလိုက် feature အသစ်များ စုစည်းဖော်ပြပါသည်။
 
 === ECMAScript^®^ 2009,ES5
 
-==== Strict Mode
+.New Features
 
-Undeclared variable များအသုံးပြုခြင်းကိုတားဆီးပြီး error handling ပိုကောင်းသည်။
+1.`"use strict"`
 
-[source,js]
-----
-'use strict' ; 
-x = 3.14 ; // x ကို declared မလုပ်သောကြောင့် error ဖြစ်ပါမည်
-----
+2.`String[number] access`
 
+3.`Multiline strings`
 
-==== `String.trim()`
+4.`String.trim()`
 
-`" example"` to `"example"`
+5.`Array.isArray()`
 
-[source,js]
-----
-const str = " example";
-console.log(str.trim()); //"example"
-----
+6.`Array.forEach()`
 
-==== `String.charAt()`
+7.`Array.map()`
 
-Return a single character from a given position in a string.
+8.`Array.filter()`
 
-[source,js]
-----
-const str = "example";
-console.log(str.charAt(0)); //"e"
-console.log(str.charAt(1)); //"x"
-console.log(str.charAt(2)); //"a"
-// whitespace before text = ""
-const str = " example";
-console.log(str.charAt(0)); //""
-console.log(str.charAt(1)); //"e"
-console.log(str.charAt(2)); //"x"
-----
+9.`Array.reduce()`
 
-==== `JSON.parse() and JSON.stringify()`
+10.`Array.reduceRight()`
 
-[source,js]
-----
-const json_str = `{ "a": "123", "b": "abc" }`;
-const js_obj = JSON.parse(json_str);
-const str_json = JSON.stringify(js_obj);
-console.log(js_obj); //{ a: '123', b: 'abc' }
-console.log(js_obj.b); //abc
-console.log(str_json); //{"a":"123","b":"abc"}
-----
+11.`Array.every()`
 
-==== Object Methods
+12.`Array.some()`
 
-New methods for manipulating objects.
+13.`Array.indexOf()`
 
-[source,js]
-----
-const obj = {a:1}; 
-Object.defineProperty(obj, 'b', {value:2}); 
-console.log( Object.keys(obj)); // ["a", "b"]
-----
+14.`Array.lastIndexOf()`
 
-==== Array Methods
+15.`JSON.parse()`
 
-Methods to iterate and manipulate arrays.
+16.`JSON.stringify()`
 
-[source,js]
-----
-const arr = [1, 2, 3, 4]; 
-const doubled = arr.map( x => x * 2 ); 
-console.log(doubled); // [2, 4, 6, 8]
-----
+17.`Date.now()`
 
-=== ECMAScript 2015^®^ , ES6(ES2015)
+18.`Date.toISOString()`
+
+19.`Date.toJSON()`
+
+20.`Property getters and setters`
+
+21.`Reserved words as property names`
+
+22.`Object.create()`
+
+23.`Object.keys()`
+
+24.`Object management`
+
+25.`Object protection`
+
+26.`Object.defineProperty()`
+
+27.`Function bind()`
+
+28.`Trailing commas`
+
+.Browser Support for ES5
+[cols="<.<,<.<,<.<,<.<,<.<"]
+|===
+^.>a| 
+image::chrome.svg[chrome,36,36]  
+^.>a| 
+image::edge.svg[edge,36,36]   
+^.>a| 
+image::firefox.svg[firefox,36,36]   
+^.>a| 
+image::safari.svg[safari,36,36]  
+^.>a| 
+image::opera.svg[opera,36,36]  
+
+^.>| Chrome 23 ^.>| Edge 10 ^.>| Firefox 21 ^.>| Safari 6 ^.>| Opera 15
+^.>| Sep 2012 ^.>| Sep 2012 ^.>| Apr 2013 ^.>| Jul 2012 ^.>| Jul 2013
+|===
+
+__ES5 (JavaScript 2009) fully supported in all modern browsers since July 2013.__
+
+=== ECMAScript^®^ 2015, ES6(ES2015)
 
 အဆင့်မြင့်တင်မှုများစွာဖြင့် ထွက်ပေါ်လာခဲ့သော ES6 သည် https://en.wikipedia.org/wiki/JavaScript[JavaScript] ယနေ့ပုံစံ ဖြစ်လာရန် အရေးပါသော အပြောင်းအလဲတစ်ခုဖြစ်ခဲ့သည်။ ES5 နှင့် ES3 အကြား အငြင်းပွားမှုတွေက ES6 ကို ပိုမိုအားကောင်းစေခဲ့သလို သက်ဆိုင်သူ ပလက်ဖောင်းများ နည်းပညာအဖွဲ့အစည်းကြီးများ Libary များ framework များ အကြား ပိုမိုချောမွေ့သော ပူးပေါင်းဆောင်ရွက်မှုအားဖြစ်ပေါ်စေခဲ့ကြောင်းသုံးသပ်ပါသည်။2015 တွင် ထုတ်ပြန်ခဲ့သော ES6 နောက်ပိုင်း နှစ်စဥ် အားထုတ်ပြန်ခဲ့ပြီး ES6 ES7 ဆိုသည့်အခေါ်အဝေါ်အစား ES2015 ES2000 စသည်ဖြင့်သုံးနှုန်းလာခဲ့ကြောင်း တွေ့ရှိရပါသည်။ 
 
-ES6 တွင်ပါရှိလာသော #feature အသစ်များအားလုံး#{es6-new-features}{standard-es6} လောလောဆယ်ဆယ် ယခုမှတ်စုတွင် ဖော်ပြနိုင်စွမ်း မရှိသေးပါ။ အသုံးများသောတစ်ချို့ကိုသာဖော်ပြထားပါသည်။
+.New Features
+
+1.`The let keyword`
+
+2.`The const keyword`
+
+3.`Arrow Functions`
+
+4.`The {a,b} = Operator`
+
+5.`The [a,b] = Operator`
+
+6.`The ... Operator`
+
+7.`For...of`
+
+8.`Map Objects`
+
+9.`Set Objects`
+
+10.`Classes`
+
+11.`Promises`
+
+12.`Symbol`
+
+13.`Default Parameters`
+
+14.`Function Rest Parameter`
+
+15.`String.includes()`
+
+16.`String.startsWith()`
+
+17.`String.endsWith()`
+
+18.`Array.entries()`
+
+19.`Array.from()`
+
+20.`Array.keys()`
+
+21.`Array.find()`
+
+22.`Array.findIndex()`
+
+23.`Math.trunc`
+
+24.`Math.sign`
+
+25.`Math.cbrt`
+
+26.`Math.log2`
+
+27.`Math.log10`
+
+28.`Number.EPSILON`
+
+29.`Number.MIN_SAFE_INTEGER`
+
+30.`Number.MAX_SAFE_INTEGER`
+
+31.`Number.isInteger()`
+
+32.`Number.isSafeInteger()`
+
+33.`New Global Methods`
+
+34.`JavaScript Modules`
+
+
+.Browser Support for ES6 (2015)
+[cols="<.<,<.<,<.<,<.<,<.<"]
+|===
+^.>a| 
+image::chrome.svg[chrome,36,36]  
+^.>a| 
+image::edge.svg[edge,36,36]   
+^.>a| 
+image::firefox.svg[firefox,36,36]   
+^.>a| 
+image::safari.svg[safari,36,36]  
+^.>a| 
+image::opera.svg[opera,36,36]  
+
+^.>| Chrome 51 ^.>| Edge 15 ^.>| Firefox 54 ^.>| Safari 10 ^.>| Opera 38
+^.>| May 2016 ^.>| Apr 2017 ^.>| Jun 2017 ^.>| Sep 2016 ^.>| Jun 2016
+|===
+
+__ES6 is fully supported in all modern browsers since June 2017.__
+
+__TIP: ES6 is not supported in Internet Explorer.__
+
+=== ECMAScript^®^ 2016, ES2016
+
+.New Features
+
+1.`JavaScript Exponentiation (**)`
+
+2.`JavaScript Exponentiation assignment (**=)`
+
+3.`JavaScript Array includes()`
+
+
+.Browser Support for ES2016
+[cols="<.<,<.<,<.<,<.<,<.<"]
+|===
+^.>a| 
+image::chrome.svg[chrome,36,36]  
+^.>a| 
+image::edge.svg[edge,36,36]   
+^.>a| 
+image::firefox.svg[firefox,36,36]   
+^.>a| 
+image::safari.svg[safari,36,36]  
+^.>a| 
+image::opera.svg[opera,36,36]  
+
+^.>| Chrome 52 ^.>| Edge 15 ^.>| Firefox 52 ^.>| Safari 10.1 ^.>| Opera 39
+^.>| May 2016 ^.>| Apr 2017 ^.>| Jun 2017 ^.>| May 2017 ^.>| Jun 2016
+|===
+
+__ES2016 is fully supported in all modern browsers since March 2017__.
+
+__ES2016 is not supported in Internet Explorer__.
+
+
+=== ECMAScript^®^ 2017, ES2017
+
+.New Features
+
+1.`String padding`
+
+2.`Object.entries()`
+
+3.`Object.values()`
+
+4.`Async and Await`
+
+5.`Trailing Commas in Functions`
+
+6.`Object.getOwnPropertyDescriptors`
+
+.Browser Support for ES2017
+[cols="<.<,<.<,<.<,<.<,<.<"]
+|===
+^.>a| 
+image::chrome.svg[chrome,36,36]  
+^.>a| 
+image::edge.svg[edge,36,36]   
+^.>a| 
+image::firefox.svg[firefox,36,36]   
+^.>a| 
+image::safari.svg[safari,36,36]  
+^.>a| 
+image::opera.svg[opera,36,36]  
+
+^.>| Chrome 57 ^.>| Edge 15 ^.>| Firefox 48 ^.>| Safari 11 ^.>| Opera 44
+^.>| Mar 2017 ^.>| Apr 2017 ^.>| Aug 2016 ^.>| Sep 2017 ^.>| Mar 2017
+|===
+
+__ES 2017 is fully supported in all modern browsers since September 2017__
+
+=== ECMAScript^®^ 2018, ES2018
+
+.New Features
+
+1.`Asynchronous Iteration`
+
+2.`Promise Finally`
+
+3.`Object Rest Properties`
+
+4.`New RegExp Features`
+
+5.`Shared Memory`
+
+.Browser Support for ES2018
+[cols="<.<,<.<,<.<,<.<,<.<"]
+|===
+^.>a| 
+image::chrome.svg[chrome,36,36]  
+^.>a| 
+image::edge.svg[edge,36,36]   
+^.>a| 
+image::firefox.svg[firefox,36,36]   
+^.>a| 
+image::safari.svg[safari,36,36]  
+^.>a| 
+image::opera.svg[opera,36,36]  
+
+^.>| Chrome 63 ^.>| Edge 79 ^.>| Firefox 57 ^.>| Safari 11 ^.>| Opera 50
+^.>| Dec 2017 ^.>| Jan 2020 ^.>| Nov 2017 ^.>| Sep 2017 ^.>| Jan 2018
+|===
+
+
+=== ECMAScript^®^ 2019, ES2019
+
+.New Features
+
+1.`String.trimStart()`
+
+2.`String.trimEnd()`
+
+3.`Object.fromEntries`
+
+4.`Optional catch binding`
+
+5.`Array.flat()`
+
+6.`Array.flatMap()`
+
+7.`Revised Array.Sort()`
+
+8.`Revised JSON.stringify()`
+
+9.`Separator symbols allowed in string litterals`
+
+10.`Revised Function.toString()`
+
+.Browser Support for ES2019
+[cols="<.<,<.<,<.<,<.<,<.<"]
+|===
+^.>a| 
+image::chrome.svg[chrome,36,36]  
+^.>a| 
+image::edge.svg[edge,36,36]   
+^.>a| 
+image::firefox.svg[firefox,36,36]   
+^.>a| 
+image::safari.svg[safari,36,36]  
+^.>a| 
+image::opera.svg[opera,36,36]  
+
+^.>| Chrome 69 ^.>| Edge 79 ^.>| Firefox 62 ^.>| Safari 12 ^.>| Opera 56
+^.>| Sep 2018 ^.>| Jan 2020 ^.>| Sep 2018 ^.>| Sep 2018 ^.>| Sep 2018
+|===
+
+=== ECMAScript^®^ 2020, ES2020
+
+.New Features
+
+BigInt
+String matchAll()
+The Nullish Coalescing Operator (??)
+The Optional Chaining Operator (?.)
+Logical AND Assignment Operator (&&=)
+Logical OR Assignment (||=)
+Nullish Coalescing Assignment (??=)
+Promise.allSettled()
+Dynamic Import
+
+=== ECMAScript^®^ 2021, ES2021
+
+.New Features
+
+Promise.any()
+String replaceAll()
+Numeric Separators (_)
+
+=== ECMAScript^®^ 2022, ES2022
+
+.New Features
+
+Array at()
+String at()
+RegExp /d
+Object.hasOwn()
+error.cause
+await import
+Class field declarations
+Private methods and fields
+
+=== ECMAScript^®^ 2023, ES2023
+
+.New Features
+
+Array findLast()
+Array findLastIndex()
+Array toReversed()
+Array toSorted()
+Array toSpliced()
+Array with()
+#! (Shebang)
 
 
 
@@ -186,3 +472,16 @@ ES6 တွင်ပါရှိလာသော #feature အသစ်များ
  . https://medium.com/@yourfuse/javascript-whats-new-with-ecmascript-2024-es15-ef056d2f4bf1[What’s new with ECMAScript^®^ 2024 (ES15) — In Depth Guide] by https://medium.com/@yourfuse[Igor Komolov] 
 
  . https://w.wiki/DxAv[ECMAScript version history]
+
+ . https://www.w3schools.com/js/js_versions.asp[JavaScript Versions]
+
+ . https://web.archive.org/web/20180318064130/http://es6-features.org/#Constants[ECMAScript 6: New Features: Overview and Comparison]
+
+
+head_script::"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.11/codemirror.min.js"[name=hs1]
+
+head_script::"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.11/mode/javascript/javascript.min.js"[name=hs2]
+
+head_script::"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.11/mode/xml/xml.min.js"[name=hs3]
+
+body_script::"./scripts/playground.js"[name=bs1]
