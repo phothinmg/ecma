@@ -53,6 +53,12 @@ console.log(Array.isArray(fruits)); // true
 
 === 6.`Array.forEach()`
 
+- return value : undefined
+
+- originalArray : not modified after the method call
+
+- newArray is not created after the end of method call.
+
 [playground]
 const nums = [1, 51, 22, "b", 57, 70, 10, 2, "a"];
 const numUnder50 = [];
