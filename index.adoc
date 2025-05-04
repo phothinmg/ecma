@@ -10,10 +10,10 @@ Pho Thin Mg <phothinmg@disroot.org>
 :note-caption: 👉
 :sectnums:
 :linkcss:
-:stylesdir: styles/
+:stylesdir: app/styles/
 :stylesheet: index.css
 :nofooter:
-:imagesdir: images/
+:imagesdir: app/images/
 :table-caption: Table
 
 
@@ -23,9 +23,9 @@ Pho Thin Mg <phothinmg@disroot.org>
 ယခုမှတ်စုအားကျနော်လေ့လာမှတ်သားမိသမျှ အားချရေးထားခြင်းဖြစ်ပါသည်။ အမှားအယွင်းတစ်စုံရှိပါက ကျနော်၏လေ့လာမှုအားနည်းခြင်းသာဖြစ်ပါသည်။ အမှားများအား တည့်မတ်ပြုပြင်ခြင်း နှင့် အတူတကွပူးပေါင်းလေ့လာ ခြင်းတို့အား ကြိုဆိုပါသည်။ 
 
 
-NOTE: Discussions :  https://github.com/phothinmg/ecma/discussions
+__Discussions :  https://github.com/phothinmg/ecma/discussions__
 
-NOTE: Repo : https://github.com/phothinmg/ecma
+__Repo : https://github.com/phothinmg/ecma__
 
 ****
 
@@ -94,11 +94,11 @@ ECMAScript^®^ ၏ အနာဂတ်အတွက် 2008 ခုနှစ် ဇ
 
 ES3 မှ ES4 ES3.1 အငြင်းပွားမှုအပြီး ထုတ်ပြန်လာသော ES5 မှစပြီး ထပ်မံဖြည့်သွင်းလာသော edition အလိုက် feature အသစ်များ စုစည်းဖော်ပြပါသည်။
 
-=== ECMAScript^®^ 2009,ES5
+=== link:app/es5.html[ECMAScript^®^ 2009,ES5]
 
 .New Features
 
-1.`"use strict"`
+1.`"use strict"` [link:app/es5.html#_1_use_strict[Example]]
 
 2.`String[number] access`
 
@@ -420,48 +420,73 @@ image::opera.svg[opera,36,36]
 
 .New Features
 
-BigInt
-String matchAll()
-The Nullish Coalescing Operator (??)
-The Optional Chaining Operator (?.)
-Logical AND Assignment Operator (&&=)
-Logical OR Assignment (||=)
-Nullish Coalescing Assignment (??=)
-Promise.allSettled()
-Dynamic Import
+1.`BigInt`
+
+2.`String matchAll()`
+
+3.`The Nullish Coalescing Operator (??)`
+
+4.`The Optional Chaining Operator (?.)`
+
+5.`Logical AND Assignment Operator (&&=)`
+
+6.`Logical OR Assignment (||=)`
+
+7.`Nullish Coalescing Assignment (??=)`
+
+8.`Promise.allSettled()`
+
+9.`Dynamic Import`
+
 
 === ECMAScript^®^ 2021, ES2021
 
 .New Features
 
-Promise.any()
-String replaceAll()
-Numeric Separators (_)
+1.`Promise.any()`
+
+2.`String replaceAll()`
+
+3.`Numeric Separators (_)`
 
 === ECMAScript^®^ 2022, ES2022
 
 .New Features
 
-Array at()
-String at()
-RegExp /d
-Object.hasOwn()
-error.cause
-await import
-Class field declarations
-Private methods and fields
+1.`Array at()`
+
+2.`String at()`
+
+3.`RegExp /d`
+
+4.`Object.hasOwn()`
+
+5.`error.cause`
+
+6.`await import`
+
+7.`Class field declarations`
+
+8.`Private methods and fields`
 
 === ECMAScript^®^ 2023, ES2023
 
 .New Features
 
-Array findLast()
-Array findLastIndex()
-Array toReversed()
-Array toSorted()
-Array toSpliced()
-Array with()
-#! (Shebang)
+1.`Array findLast()`
+
+2.`Array findLastIndex()`
+
+3.`Array toReversed()`
+
+4.`Array toSorted()`
+
+5.`Array toSpliced()`
+
+6.`Array with()`
+
+7.`#! (Shebang)`
+
 
 
 
@@ -478,10 +503,4 @@ Array with()
  . https://web.archive.org/web/20180318064130/http://es6-features.org/#Constants[ECMAScript 6: New Features: Overview and Comparison]
 
 
-head_script::"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.11/codemirror.min.js"[name=hs1]
-
-head_script::"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.11/mode/javascript/javascript.min.js"[name=hs2]
-
-head_script::"https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.11/mode/xml/xml.min.js"[name=hs3]
-
-body_script::"./scripts/playground.js"[name=bs1]
+script::"https://cdn.jsdelivr.net/gh/phothinmg/master-repo@main/jsplayground/index.min.js"[name="body"]

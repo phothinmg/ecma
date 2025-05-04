@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="author" content="Pho Thin Mg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>ECMAScript® 2009,ES5</title>
+<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/monokai.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>ECMAScript<sup>®</sup> 2009,ES5</h1>
+<div class="details">
+<span id="author" class="author">Pho Thin Mg</span><br>
+<span id="email" class="email"><a href="mailto:phothinmg@disroot.org">phothinmg@disroot.org</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_new_features">1. New Features</a>
+<ul class="sectlevel2">
+<li><a href="#_1_use_strict">1.1. 1.<code>"use strict"</code></a></li>
+<li><a href="#_2_stringnumber_access">1.2. 2.<code>String[number] access</code></a></li>
+<li><a href="#_3_multiline_strings">1.3. 3.<code>Multiline strings</code></a></li>
+<li><a href="#_4_string_trim">1.4. 4.<code>String.trim()</code></a></li>
+<li><a href="#_5_array_isarray">1.5. 5.<code>Array.isArray()</code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_new_features">1. New Features</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_use_strict">1.1. 1.<code>"use strict"</code></h3>
+    <div class="code-playground" id="_$001847">
+      <code-playground layout="stack" show-line-numbers autorun="never">
+        <div slot="javascript">'use strict' ;
+ x = 3.14 ; // x ကို declared မလုပ်သောကြောင့် error ဖြစ်ပါမည်
+ console.log(x)</div>
+      </code-playground>
+    <div>
+</div>
+<div class="sect2">
+<h3 id="_2_stringnumber_access">1.2. 2.<code>String[number] access</code></h3>
+    <div class="code-playground" id="_$001847">
+      <code-playground layout="stack" show-line-numbers autorun="never">
+        <div slot="javascript">const str = "HELLO WORLD";
+console.log(str.charAt(0)); // returns H
+console.log(str[0]); // returns H</div>
+      </code-playground>
+    <div>
+</div>
+<div class="sect2">
+<h3 id="_3_multiline_strings">1.3. 3.<code>Multiline strings</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">"Hello \
+Dolly!";</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_string_trim">1.4. 4.<code>String.trim()</code></h3>
+<div class="paragraph">
+<p><code>" example"</code> to <code>"example"</code></p>
+</div>
+    <div class="code-playground" id="_$001847">
+      <code-playground layout="stack" show-line-numbers autorun="never">
+        <div slot="javascript">const str = " example";
+console.log(str.trim()); //"example"</div>
+      </code-playground>
+    <div>
+</div>
+<div class="sect2">
+<h3 id="_5_array_isarray">1.5. 5.<code>Array.isArray()</code></h3>
+    <div class="code-playground" id="_$001847">
+      <code-playground layout="stack" show-line-numbers autorun="never">
+        <div slot="javascript">const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(Array.isArray(fruits)); // true</div>
+      </code-playground>
+    <div>
+          <script>
+            const body = document.createElement("script");
+            body.src = "https://cdn.jsdelivr.net/gh/phothinmg/master-repo@main/jsplayground/index.min.js";
+            document.body.appendChild(body);
+          </script>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/languages/js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/languages/ts.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>

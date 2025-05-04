@@ -18,8 +18,7 @@
   },
   "homepage": "https://github.com/phothinmg/ecma#readme",
   "dependencies": {
-    "@types/minify": "^9.1.4",
-    "asciidoctor": "^3.0.4"
+    "lwe8-ascii": "^0.1.2"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",

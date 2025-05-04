@@ -1,0 +1,83 @@
+= ECMAScript^®^ 2009,ES5
+Pho Thin Mg <phothinmg@disroot.org>
+:source-highlighter: highlight.js
+:highlightjs-theme: monokai
+:highlightjs-languages: js,ts
+:toc: left
+:toclevels: 4
+:favicon:
+:tip-caption: 💡
+:note-caption: 👉
+:sectnums:
+:linkcss:
+:nofooter:
+:stylesdir: styles/
+:stylesheet: index.css
+:imagesdir: images/
+
+== New Features
+
+=== 1.`"use strict"`
+
+[playground]
+'use strict' ; 
+ x = 3.14 ; // x ကို declared မလုပ်သောကြောင့် error ဖြစ်ပါမည်
+ console.log(x)
+
+=== 2.`String[number] access`
+
+[playground]
+const str = "HELLO WORLD";
+console.log(str.charAt(0)); // returns H
+console.log(str[0]); // returns H
+
+=== 3.`Multiline strings`
+
+[source,js]
+"Hello \
+Dolly!";
+
+=== 4.`String.trim()`
+
+`" example"` to `"example"`
+
+[playground]
+const str = " example";
+console.log(str.trim()); //"example"
+
+=== 5.`Array.isArray()`
+
+[playground]
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(Array.isArray(fruits)); // true
+
+=== 6.`Array.forEach()`
+
+[playground]
+const nums = [1, 51, 22, "b", 57, 70, 10, 2, "a"];
+const numUnder50 = [];
+const numOver50 = [];
+const notNum = [];
+// ----
+nums.forEach(function (i) {
+  if (typeof i !== "number") {
+    notNum.push(i);
+  } else if (i > 50) {
+    numOver50.push(i);
+  } else {
+    numUnder50.push(i);
+  }
+});
+console.log(notNum); // [ 'b', 'a' ]
+console.log(numOver50); // [ 51, 57, 70 ]
+console.log(numUnder50); // [ 1, 22, 10, 2 ]
+
+=== 7.`Array.map()`
+
+
+
+
+
+
+
+script::"https://cdn.jsdelivr.net/gh/phothinmg/master-repo@main/jsplayground/index.min.js"[name="body"]
