@@ -5,7 +5,7 @@ Pho Thin Mg <phothinmg@disroot.org>
 :highlightjs-languages: js,ts
 :toc: left
 :toclevels: 4
-:favicon:
+:favicon: images/favicon.ico
 :tip-caption: 💡
 :note-caption: 👉
 :sectnums:
@@ -17,27 +17,27 @@ Pho Thin Mg <phothinmg@disroot.org>
 
 == New Features
 
-=== 1.`"use strict"`
+=== `"use strict"`
 
 [playground]
 'use strict' ; 
  x = 3.14 ; // x ကို declared မလုပ်သောကြောင့် error ဖြစ်ပါမည်
  console.log(x)
 
-=== 2.`String[number] access`
+=== `String[number] access`
 
 [playground]
 const str = "HELLO WORLD";
 console.log(str.charAt(0)); // returns H
 console.log(str[0]); // returns H
 
-=== 3.`Multiline strings`
+=== `Multiline strings`
 
 [source,js]
 "Hello \
 Dolly!";
 
-=== 4.`String.trim()`
+=== `String.trim()`
 
 `" example"` to `"example"`
 
@@ -45,13 +45,13 @@ Dolly!";
 const str = " example";
 console.log(str.trim()); //"example"
 
-=== 5.`Array.isArray()`
+=== `Array.isArray()`
 
 [playground]
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 console.log(Array.isArray(fruits)); // true
 
-=== 6.`Array.forEach()`
+=== `Array.forEach()`
 
 - return value : undefined
 
@@ -65,7 +65,7 @@ const numUnder50 = [];
 const numOver50 = [];
 const notNum = [];
 // ----
-nums.forEach(function (i) {
+const test = nums.forEach(function (i) {
   if (typeof i !== "number") {
     notNum.push(i);
   } else if (i > 50) {
@@ -77,13 +77,43 @@ nums.forEach(function (i) {
 console.log(notNum); // [ 'b', 'a' ]
 console.log(numOver50); // [ 51, 57, 70 ]
 console.log(numUnder50); // [ 1, 22, 10, 2 ]
+console.log(test)// undefined
 
-=== 7.`Array.map()`
+=== `Array.map()`
 
+- return value : new Array populated with the results of calling a provided function on every element in the calling array
 
+- originalArray : not modified after the method call
 
+- newArray is created after the end of method call.
 
+[playground]
+const nums = [1, 2, 3, 4, 5];
+const new_nums = nums.map((i) => i + 1);
+console.log(nums); // [ 1, 2, 3, 4, 5 ]
+console.log(new_nums); // [ 2, 3, 4, 5, 6 ]
 
+=== `Array.filter()`
+
+[playground]
+const nums = [1, 2, 3, 4, 5];
+const new_nums = nums.map((i) => i + 1);
+console.log(nums); // [ 1, 2, 3, 4, 5 ]
+console.log(new_nums); // [ 2, 3, 4, 5, 6 ]
+
+=== `Array.filter()`
+
+[playground]
+const nums = [45, 4, 9, 16, 25];
+const new_nums = nums.filter((i) => i > 20);
+console.log(nums); // [ 45, 4, 9, 16, 25 ]
+console.log(new_nums); // [ 45, 25 ]
+
+=== `Array.reduce()`
+
+=== `Array.reduceRight()`
+
+=== `Array.every()`
 
 
 script::"https://cdn.jsdelivr.net/gh/phothinmg/master-repo@main/jsplayground/index.min.js"[name="body"]

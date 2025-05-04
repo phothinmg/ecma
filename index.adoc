@@ -5,7 +5,7 @@ Pho Thin Mg <phothinmg@disroot.org>
 :highlightjs-languages: js,ts
 :toc: left
 :toclevels: 4
-:favicon:
+:favicon: app/images/favicon.ico
 :tip-caption: 💡
 :note-caption: 👉
 :sectnums:
@@ -48,10 +48,9 @@ ECMAScript^®^ (အတိုကောက် ES) သည် https://en.wikipedia.o
 https://ecma-international.org/technical-committees/tc39/[Technical Committee 39](အတိုကောက် TC39) သည်
 ECMAScript^®^ စံနှုန်းကို ပြောင်းလဲခြင်းနှင့် ထိန်းသိမ်းခြင်းအတွက် တာဝန်ရှိသော https://ecma-international.org/[Ecma International]  ကော်မတီဖြစ်သည်။ 
 
-[NOTE]
+
 __ECMAScript__^®^ __is__ __registered__ __trademarks__ __of__ https://ecma-international.org/[__Ecma International__].
 
-[NOTE]
 __JavaScript__^TM^ __is__ __a__ __trademark__ __of__ https://www.oracle.com/[__Oracle__].
 
 ==== ထုတ်ပြန်ခဲ့ပီးသော edition များ
